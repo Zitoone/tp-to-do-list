@@ -5,13 +5,8 @@ const taskController=require('../controllers/taskController')
 router.post('/', taskController.createNewTask)
 router.get('/', taskController.getAllTasks)
 router.get('/:id', taskController.getTaskById)
+router.put('/:id', taskController.updateTask)
+router.delete('/:id', taskController.deleteTask)
+router.patch('/:id', taskController.completedTask)
 
 module.exports=router
-
-
-//Méthode	Endpoint	Description
-//GET	/api/tasks	Récupère toutes les tâches
-//GET	/api/tasks/:id	Récupère une tâche par ID
-//POST	/api/tasks	Crée une nouvelle tâche
-//PUT	/api/tasks/:id	Met à jour une tâche
-//DELETE	/api/tasks/:id	Supprime une tâche
